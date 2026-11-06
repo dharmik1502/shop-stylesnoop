@@ -1,0 +1,106 @@
+@import "tailwindcss";
+
+/* Brand tokens for the shop, exposed as Tailwind utilities
+     (bg-brand, text-green, text-ink, hover:bg-brand-light, ...). */
+@theme inline {
+    --font-sans: var(--font-poppins), Arial, sans-serif;
+    --color-brand: #ad0061;
+    --color-brand-dark: #a5005b;
+    --color-brand-light: #ffe6f4;
+    --color-green: #159647;
+    --color-ink: #1a1a1a;
+    --color-plum: #341232;
+    --color-surface: #f4f4f7;
+    --color-line: #e8e8ee;
+    --color-muted: #6b6b7b;
+    --color-sale: #e11d48;
+}
+
+:root {
+    --container-padding: 1rem; /* default horizontal padding */
+}
+
+@media (min-width: 640px) {
+    :root { --container-padding: 1.25rem; }
+}
+@media (min-width: 1024px) {
+    :root { --container-padding: 2rem; }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Reset box-sizing and basic body styles */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-sans);
+    color: var(--color-ink);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Horizontal row that scrolls on small screens without a visible bar. */
+.scroll-x {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+.scroll-x::-webkit-scrollbar {
+    display: none;
+}
+
+/* Responsive centered container used across pages. Use <div class="container"> as wrapper.
+     It provides comfortable horizontal padding and clamps width at common breakpoints. */
+.container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--container-padding);
+    padding-right: var(--container-padding);
+}
+
+@media (min-width: 640px) {
+    .container { max-width: 640px; }
+}
+@media (min-width: 768px) {
+    .container { max-width: 768px; }
+}
+@media (min-width: 1024px) {
+    .container { max-width: 1024px; }
+}
+@media (min-width: 1280px) {
+    .container { max-width: 1280px; }
+}
+@media (min-width: 1536px) {
+    .container { max-width: 1536px; }
+}
+
+/* Utility: full-bleed container (no horizontal padding) */
+.container-bleed {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* Small helpers for consistent vertical rhythm */
+.stack-gap-4 > * + * { margin-top: 1rem; }
+.stack-gap-6 > * + * { margin-top: 1.5rem; }
+
+/* Keep large images and galleries responsive */
+img, video, canvas, picture {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Hide the native disclosure marker on FAQ accordions. */
+details > summary { list-style: none; }
+details > summary::-webkit-details-marker { display: none; }
+
+/* End of globals */
