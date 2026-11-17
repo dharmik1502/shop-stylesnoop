@@ -6,7 +6,9 @@ import { SITE } from "../../lib/site";
 export const dynamicParams = false;
 
 export function generateStaticParams() {
-  return Array.from({ length: homePageCount() - 1 }, (_, i) => ({ n: String(i + 2) }));
+  const params = Array.from({ length: homePageCount() - 1 }, (_, i) => ({ n: String(i + 2) }));
+  // `output: "export"` rejects an empty list; the placeholder renders a 404.
+  return params.length ? params : [{ n: "2" }];
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ n: string }> }): Promise<Metadata> {

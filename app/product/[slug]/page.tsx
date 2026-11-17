@@ -19,7 +19,9 @@ import JsonLd from "../../components/JsonLd";
 export const dynamicParams = false;
 
 export function generateStaticParams() {
-  return PRODUCTS.map((p) => ({ slug: p.slug }));
+  const params = PRODUCTS.map((p) => ({ slug: p.slug }));
+  // `output: "export"` rejects an empty list; the placeholder renders a 404.
+  return params.length ? params : [{ slug: "_" }];
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {

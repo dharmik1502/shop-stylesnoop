@@ -7,9 +7,11 @@ import { categoryMeta } from "../../../../lib/seo";
 export const dynamicParams = false;
 
 export function generateStaticParams() {
-  return CATEGORIES.flatMap((c) =>
+  const params = CATEGORIES.flatMap((c) =>
     Array.from({ length: categoryPageCount(c.slug) - 1 }, (_, i) => ({ slug: c.slug, n: String(i + 2) })),
   );
+  // `output: "export"` rejects an empty list; the placeholder renders a 404.
+  return params.length ? params : [{ slug: "_", n: "2" }];
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string; n: string }> }): Promise<Metadata> {

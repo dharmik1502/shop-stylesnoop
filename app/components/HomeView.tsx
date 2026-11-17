@@ -17,7 +17,7 @@ export function homePageCount() {
   return Math.max(1, Math.ceil(getFeatured().length / HOME_PAGE_SIZE));
 }
 
-function Hero({ spotlight }: { spotlight: Product }) {
+function Hero({ spotlight }: { spotlight?: Product }) {
   const promos = [
     { slug: "hot-deals", eyebrow: "Limited time", title: "Hot Deals", text: "Up to 80% off", tone: "from-[#fff1e6] to-[#ffe0cc]" },
     { slug: "best-seller", eyebrow: "Customer favourites", title: "Best Sellers", text: "Top rated picks", tone: "from-[#eef4ff] to-[#dde8ff]" },
@@ -49,6 +49,7 @@ function Hero({ spotlight }: { spotlight: Product }) {
               </Link>
             </div>
           </div>
+          {spotlight && (
           <Link href={`/product/${spotlight.slug}/`} className="group relative hidden sm:block">
             <div className="aspect-square overflow-hidden rounded-2xl bg-white p-4 shadow-2xl ring-1 ring-white/20 transition group-hover:-rotate-1">
               {/* eslint-disable-next-line @next/next/no-img-element -- static export, images are unoptimized */}
@@ -58,6 +59,7 @@ function Hero({ spotlight }: { spotlight: Product }) {
               {getDiscountPercent(spotlight)}% OFF
             </span>
           </Link>
+          )}
         </div>
       </div>
 
