@@ -18,7 +18,7 @@ function SearchForm({ id }: { id: string }) {
         id={id}
         name="q"
         type="search"
-        placeholder="Search for watches, decor, fashion and more"
+        placeholder="Search for almonds, cashews, dates and more"
         autoComplete="off"
         className="h-11 w-full rounded-lg border border-line bg-surface pr-12 pl-4 text-[14px] text-ink outline-none transition placeholder:text-[#9a9aa8] focus:border-brand focus:bg-white focus:ring-4 focus:ring-brand/10"
       />
@@ -68,7 +68,7 @@ export default function Header() {
       <div className="bg-plum text-white">
         <div className="container flex h-8 items-center justify-center gap-6 text-[11.5px] font-medium tracking-wide sm:justify-between sm:text-[12px]">
           <p className="truncate">
-            <span className="text-[#ffb3dc]">FREE DELIVERY</span>{" "}on every order &nbsp;·&nbsp; Cash on Delivery available
+            <span className="text-[#ffd08a]">FREE DELIVERY</span>{" "}on every order &nbsp;·&nbsp; Cash on Delivery available
           </p>
           <div className="hidden items-center gap-5 text-white/80 sm:flex">
             <Link href="/shipping-info/" className="hover:text-white">
@@ -149,7 +149,7 @@ export default function Header() {
                 key={c.slug}
                 href={`/category/${c.slug}/`}
                 className={`rounded-md px-3 py-1.5 hover:bg-surface hover:text-brand ${
-                  c.slug === "hot-deals" ? "font-semibold text-sale" : "text-ink"
+                  c.slug === "gift-boxes" ? "font-semibold text-sale" : "text-ink"
                 }`}
               >
                 {c.name === "HOT DEALS" ? "Hot Deals" : c.name}

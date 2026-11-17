@@ -16,7 +16,7 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
   title: {
-    default: `${SITE.name} – Online Shopping for Fashion, Home Decor, Lights & Gadgets | Up to 80% Off`,
+    default: `${SITE.name} – Buy Premium Dry Fruits, Nuts & Seeds Online | Free Delivery`,
     template: `%s | ${SITE.name}`,
   },
   description: SITE.description,
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     url: "/",
     title: `${SITE.name} – ${SITE.tagline}`,
     description: SITE.description,
-    images: [{ url: "/images/categories/c01.webp", alt: SITE.name }],
+    images: [{ url: "/images/categories/nuts.webp", alt: SITE.name }],
   },
   twitter: { card: "summary_large_image", title: `${SITE.name} – ${SITE.tagline}`, description: SITE.description },
   robots: {

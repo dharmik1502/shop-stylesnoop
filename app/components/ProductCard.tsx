@@ -25,7 +25,7 @@ export function RatingBadge({ rating, reviews, size = "sm" }: { rating: number; 
 export default function ProductCard({ product, compact = false }: { product: Product; compact?: boolean }) {
   const off = getDiscountPercent(product);
   return (
-    <div className="group relative flex h-full flex-col overflow-hidden rounded-xl border border-line bg-white transition-all duration-300 hover:-translate-y-0.5 hover:border-transparent hover:shadow-[0_12px_32px_-12px_rgba(52,18,50,0.28)]">
+    <div className="group relative flex h-full flex-col overflow-hidden rounded-xl border border-line bg-white transition-all duration-300 hover:-translate-y-0.5 hover:border-transparent hover:shadow-[0_12px_32px_-12px_rgba(58,36,18,0.28)]">
       <div className="relative aspect-square w-full overflow-hidden bg-[#f7f7f9]">
         {/* eslint-disable-next-line @next/next/no-img-element -- static export, images are unoptimized */}
         <img

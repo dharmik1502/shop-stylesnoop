@@ -1,6 +1,6 @@
-# StyleSnoop
+# NuttyNest
 
-An online shop built with Next.js 16 (App Router, static export), React 19 and Tailwind 4. `next build` exports it as plain HTML, so any static host can serve it. The layout is responsive, from phone width up to wide desktop screens.
+An online dry fruits shop (nuts, dried fruits, dates, seeds and gift boxes) built with Next.js 16 (App Router, static export), React 19 and Tailwind 4. `next build` exports it as plain HTML, so any static host can serve it. The layout is responsive, from phone width up to wide desktop screens.
 
 ## Run it
 
@@ -36,7 +36,7 @@ Every route is prerendered at build time (`output: "export"`, `trailingSlash: tr
 - `app/lib/cart.ts`: the cart. Items are stored in `localStorage` under `stylesnoop-cart`, and `useCart()` re-renders components when they change.
 - `app/sitemap.ts`, `app/robots.ts`: the generated sitemap (every home, category and product page) and robots rules (cart, checkout and search are disallowed).
 - `app/globals.css`: the Tailwind 4 entry, brand tokens exposed through `@theme inline`, and the `.container` widths.
-- `public/images/categories/`, `public/images/products/`: category and product pictures. Product pictures are named `{productId}-{n}.webp`.
+- `public/images/categories/`, `public/images/products/`: category and product pictures. Product pictures are named `{productId}-{n}.webp`. The photos come from Wikimedia Commons; `public/images/CREDITS.md` lists each source and licence, which must stay with the images.
 
 ## Styling
 
@@ -44,9 +44,9 @@ Styling is done with Tailwind utility classes. The brand palette is defined as t
 
 | Token | Value | Used for |
 | --- | --- | --- |
-| `brand` | `#ad0061` | primary pink |
-| `brand-dark` / `brand-light` | `#a5005b` / `#ffe6f4` | hover and tint |
-| `plum` | `#341232` | hero gradient |
+| `brand` | `#9a4f12` | primary almond brown |
+| `brand-dark` / `brand-light` | `#7c3f0e` / `#fbeedd` | hover and tint |
+| `plum` | `#3a2412` | dark cocoa, hero gradient |
 | `green` | `#159647` | prices, ratings, savings |
 | `sale` | `#e11d48` | errors and sale badges |
 | `ink` / `muted` | `#1a1a1a` / `#6b6b7b` | body and secondary text |
@@ -56,7 +56,7 @@ Use them as `bg-brand`, `text-green`, `border-line`, `hover:bg-brand-light` and 
 
 ## Prices
 
-`price` is the selling price in rupees. The struck-through MRP comes from `getMrp`. If a product has an `mrp` field, that value is used. Otherwise `getMrp` derives an MRP from the product id that gives a 60–80% discount and ends in 9. `getDiscountPercent` turns the two prices into the "% off" badge.
+`price` is the selling price in rupees. The struck-through MRP comes from `getMrp`. If a product has an `mrp` field, that value is used. Otherwise `getMrp` derives an MRP from the product id that gives a 60–80% discount and ends in 9. Every dry fruit product sets its own `mrp`. `getDiscountPercent` turns the two prices into the "% off" badge.
 
 ## Cart and checkout
 

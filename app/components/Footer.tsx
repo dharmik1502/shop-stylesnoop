@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { CATEGORIES } from "../data/categories";
 import { SITE } from "../lib/site";
-import { IconCash, IconMail, IconReturn, IconShield, IconTruck } from "./Icons";
+import { IconMail, IconShield, IconTruck } from "./Icons";
 import Logo from "./Logo";
 import Year from "./Year";
 
@@ -37,8 +37,6 @@ const COLUMNS = [
 
 export const PERKS = [
   { Icon: IconTruck, title: "Free Delivery", text: "On every order, across India" },
-  { Icon: IconCash, title: "Cash on Delivery", text: "Pay when your order arrives" },
-  { Icon: IconReturn, title: "7-Day Returns", text: "Simple return requests by email" },
   { Icon: IconShield, title: "Safe Shopping", text: "We never ask for card or OTP" },
 ];
 
@@ -47,7 +45,7 @@ export default function Footer() {
     <footer className="mt-12 w-full bg-white">
       {/* Perks band */}
       <div className="border-y border-line bg-surface">
-        <div className="container grid grid-cols-2 gap-x-4 gap-y-5 py-6 lg:grid-cols-4">
+        <div className="container grid grid-cols-2 gap-x-4 gap-y-5 py-6">
           {PERKS.map(({ Icon, title, text }) => (
             <div key={title} className="flex items-center gap-3">
               <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-white text-brand ring-1 ring-line">

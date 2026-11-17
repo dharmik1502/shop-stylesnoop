@@ -5,7 +5,7 @@ import { SITE } from "../lib/site";
 
 export const metadata: Metadata = pageMeta({
   title: "Disclaimer",
-  description: "General disclaimer for information and products shown on the StyleSnoop website.",
+  description: "General disclaimer for information and products shown on the NuttyNest website.",
   path: "/disclaimer/",
   keywords: ["disclaimer"],
 });

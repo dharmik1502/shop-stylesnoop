@@ -9,8 +9,8 @@ import { CATEGORIES } from "../data/categories";
 import { getByCategory } from "../data/products";
 
 export const metadata: Metadata = pageMeta({
-  title: "All Categories – Shop Fashion, Trending, Best Sellers & Hot Deals",
-  description: "Browse every StyleSnoop category: fashion, trending gadgets, best sellers, special collection home decor and hot deals with up to 80% off and free delivery.",
+  title: "All Categories – Nuts, Dried Fruits, Dates, Seeds & Gift Boxes",
+  description: "Browse every NuttyNest category: premium nuts, dried fruits, dates and raisins, makhana and seeds, and dry fruit gift boxes, with free delivery across India.",
   path: "/category/",
   keywords: ["shop by category", "all categories", ...Object.values(CATEGORY_KEYWORDS).map((k) => k[0])],
 });

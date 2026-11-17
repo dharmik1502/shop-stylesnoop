@@ -4,10 +4,10 @@ import StaticPage from "../components/StaticPage";
 import { SITE } from "../lib/site";
 
 export const metadata: Metadata = pageMeta({
-  title: "About Us – Affordable Online Shopping Store in India",
-  description: "Learn about StyleSnoop, an online shopping store for fashion, home decor, lights, gadgets and everyday essentials at affordable prices with free delivery across India.",
+  title: "About Us – Premium Dry Fruits Store in India",
+  description: "Learn about NuttyNest, an online store for premium dry fruits, nuts, dates, seeds and gift boxes, freshly packed and delivered free across India.",
   path: "/about/",
-  keywords: ["about StyleSnoop", "online store India", "affordable online shopping", "trusted shopping site"],
+  keywords: ["about NuttyNest", "dry fruits store India", "premium dry fruits online", "trusted dry fruit seller"],
 });
 
 export default function AboutPage() {
@@ -15,47 +15,35 @@ export default function AboutPage() {
   return (
     <StaticPage title="About Us">
       <p>
-        Welcome to {n}, an online shopping destination created to make everyday products more accessible, convenient, and
-        affordable. Our goal is to bring together a wide selection of useful, stylish, and practical products for customers
-        looking for quality and value in one convenient place.
+        Welcome to {n}, an online store for premium dry fruits, nuts and seeds. We started with a simple idea: the almonds,
+        cashews and dates you eat every day should be fresh, clean and fairly priced, and you should be able to order them
+        from home without guessing about quality.
       </p>
       <p>
-        At {n}, we believe shopping should be simple and enjoyable. Our collection includes products across different categories,
-        allowing customers to explore fashion, accessories, footwear, gadgets, lifestyle products, home essentials, and other
-        everyday items. We continuously look for new and useful products that can match different preferences, lifestyles, and
-        budgets.
+        Our range covers everyday staples like California almonds, whole cashews, walnut kernels, pistachios and golden
+        kishmish, along with Medjool dates, anjeer, dried apricots, cranberries, makhana, chia and pumpkin seeds, and a few
+        exotic nuts such as macadamias, pecans and Brazil nuts. For festivals, weddings and corporate gifting we also put
+        together dry fruit gift boxes and combos.
       </p>
       <p>
-        Our approach is focused on providing a balance between product variety, practical value, attractive designs, and
-        competitive pricing. We understand that customers want products that look good, perform their intended purpose, and offer
-        meaningful value. For this reason, we carefully select products with everyday usability and customer needs in mind.
+        We buy from trusted growers and importers, sort every lot for size and colour, and reject broken, shrivelled or
+        discoloured pieces. Products are packed in food-grade, airtight, resealable pouches so they reach you crunchy and
+        full of flavour, and every pack carries its packing date and best-before date.
       </p>
       <p>
-        Whether you are updating your personal style, searching for useful accessories, adding something new to your home,
-        exploring the latest gadgets, or simply looking for convenient everyday products, {n} is designed to give you plenty of
-        options. Our growing collection makes it easier to discover products for different occasions and requirements without
-        making the shopping process complicated.
+        Whether you soak a handful of almonds every morning, add cashews to your curries, snack on roasted makhana in the
+        evening or need a gift box for Diwali, {n} is designed to make it easy. Clear product descriptions, honest pack
+        weights and simple pricing let you choose with confidence.
       </p>
       <p>
-        Customer satisfaction is an important part of our approach. We aim to provide clear product information and a
-        straightforward shopping experience so customers can browse, compare, and choose products with greater confidence. We
-        also value customer feedback because it helps us understand changing preferences and continuously improve our product
-        selection and services.
+        Customer satisfaction is at the heart of what we do. If a pack ever arrives damaged or not up to the mark, write to
+        us and we will make it right. Your feedback also helps us decide which products to add next.
       </p>
       <p>
-        {n} is powered by {SITE.company}, with a focus on creating a convenient online marketplace where customers can discover a
-        broad range of products at accessible prices. We are committed to improving our collections and bringing fresh products
-        to our customers as shopping trends and everyday needs continue to evolve.
+        {n} is powered by {SITE.company}. As we grow, our goal stays the same: bring you wholesome, good-quality dry fruits at
+        fair prices, delivered fresh to your door anywhere in India.
       </p>
-      <p>
-        As we continue growing, our vision remains simple: provide a convenient place where customers can discover useful
-        products, explore new choices, and enjoy an easy online shopping experience. We invite you to explore {n} and discover
-        products that add value, style, and convenience to your everyday life.
-      </p>
-      <p>
-        Thank you for choosing {n}. We appreciate your trust and look forward to making your online shopping experience simple,
-        convenient, and rewarding.
-      </p>
+      <p>Thank you for choosing {n}. We look forward to being part of your healthy snacking.</p>
     </StaticPage>
   );
 }

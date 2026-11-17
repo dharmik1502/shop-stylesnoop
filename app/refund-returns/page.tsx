@@ -5,7 +5,7 @@ import { SITE } from "../lib/site";
 
 export const metadata: Metadata = pageMeta({
   title: "Return & Refund Policy – 7-Day Easy Returns",
-  description: "Read the StyleSnoop return and refund policy: simple 7-day return requests by email and quick refunds.",
+  description: "Read the NuttyNest return and refund policy: simple 7-day return requests by email and quick refunds.",
   path: "/refund-returns/",
   keywords: ["return policy", "refund policy", "easy returns", "7 day return", "exchange policy"],
 });
@@ -18,7 +18,7 @@ export default function RefundPage() {
       <section id="returns" className="mb-4">
         <h2>Easy Return</h2>
         <p>At {SITE.name}, we want you to be satisfied with your purchase. If you are not happy with your products, you can request a return within 7 days of receiving your order.</p>
-        <p>To start a return, email us at <Email /> with your order number and a brief reason. Products must be unused, in original packaging, and in the same condition as received.</p>
+        <p>To start a return, email us at <Email /> with your order number, a brief reason and a photo of the product. Because dry fruits are food products, returns are accepted only for packs that arrive damaged, spoiled, tampered with or different from what you ordered. For hygiene reasons we cannot accept returns of opened packs that are in good condition.</p>
         <p>Once your return is approved and the product is picked up and inspected, a full refund will be processed within 5–7 business days to your original payment method (including COD adjustments where applicable).</p>
         <p>Return shipping costs are borne by the customer unless the item is defective or incorrectly shipped.</p>
       </section>

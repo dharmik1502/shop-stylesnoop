@@ -4,12 +4,12 @@
      (bg-brand, text-green, text-ink, hover:bg-brand-light, ...). */
 @theme inline {
     --font-sans: var(--font-poppins), Arial, sans-serif;
-    --color-brand: #ad0061;
-    --color-brand-dark: #a5005b;
-    --color-brand-light: #ffe6f4;
+    --color-brand: #9a4f12;
+    --color-brand-dark: #7c3f0e;
+    --color-brand-light: #fbeedd;
     --color-green: #159647;
     --color-ink: #1a1a1a;
-    --color-plum: #341232;
+    --color-plum: #3a2412;
     --color-surface: #f4f4f7;
     --color-line: #e8e8ee;
     --color-muted: #6b6b7b;

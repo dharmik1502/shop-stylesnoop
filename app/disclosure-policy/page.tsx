@@ -5,7 +5,7 @@ import { SITE } from "../lib/site";
 
 export const metadata: Metadata = pageMeta({
   title: "Disclosure Policy",
-  description: "Read the StyleSnoop disclosure policy and how we present information on our website.",
+  description: "Read the NuttyNest disclosure policy and how we present information on our website.",
   path: "/disclosure-policy/",
   keywords: ["disclosure policy"],
 });

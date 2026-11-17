@@ -5,9 +5,9 @@ import { SITE } from "../lib/site";
 
 export const metadata: Metadata = pageMeta({
   title: "Contact Us – Customer Support & Order Help",
-  description: "Contact StyleSnoop customer support by email for order help, tracking, returns and product questions. We reply within 24–48 hours.",
+  description: "Contact NuttyNest customer support by email for order help, tracking, returns and product questions. We reply within 24–48 hours.",
   path: "/contact/",
-  keywords: ["StyleSnoop contact", "customer support", "order help", "customer care email", "track my order"],
+  keywords: ["NuttyNest contact", "customer support", "order help", "customer care email", "track my order"],
 });
 
 const Email = () => <a href={`mailto:${SITE.email}`}>{SITE.email}</a>;
@@ -59,7 +59,7 @@ export default function ContactPage() {
       <section id="commitment" className="mb-4">
         <h2>Our Commitment to You</h2>
         <p>
-          We aim to respond to all emails within 24–48 hours. Whether you&rsquo;re asking about a specific style or need help
+          We aim to respond to all emails within 24–48 hours. Whether you&rsquo;re asking about a specific product or need help
           with an order, our goal is to make your {SITE.name} experience smooth and satisfying.
         </p>
       </section>

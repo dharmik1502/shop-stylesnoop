@@ -6,7 +6,7 @@ import { SITE } from "../lib/site";
 
 export const metadata: Metadata = pageMeta({
   title: "Privacy Policy",
-  description: "How StyleSnoop collects, uses and protects your personal information when you shop with us.",
+  description: "How NuttyNest collects, uses and protects your personal information when you shop with us.",
   path: "/privacy-policy/",
   keywords: ["privacy policy", "data protection"],
 });

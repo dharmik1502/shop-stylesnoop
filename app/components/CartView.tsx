@@ -23,16 +23,16 @@ export function EmptyCart() {
         <IconCart className="h-10 w-10" />
       </span>
       <h1 className="mt-5 text-[20px] font-bold text-ink">Your cart is empty</h1>
-      <p className="mt-1.5 text-[14px] text-muted">Looks like you haven&rsquo;t added anything yet. Explore our deals and find something you love.</p>
+      <p className="mt-1.5 text-[14px] text-muted">Looks like you haven&rsquo;t added anything yet. Explore our nuts, dates and gift boxes to find something you love.</p>
       <div className="mt-6 flex flex-col justify-center gap-2.5 sm:flex-row">
         <Link href="/" className="inline-flex h-11 items-center justify-center rounded-lg bg-brand px-6 text-[14px] font-semibold text-white hover:bg-brand-dark">
           Start Shopping
         </Link>
         <Link
-          href="/category/hot-deals/"
+          href="/category/gift-boxes/"
           className="inline-flex h-11 items-center justify-center rounded-lg border border-line px-6 text-[14px] font-semibold text-ink hover:border-brand hover:text-brand"
         >
-          See Hot Deals
+          See Gift Boxes
         </Link>
       </div>
     </div>

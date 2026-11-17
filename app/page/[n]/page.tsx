@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: { params: Promise<{ n: string
   const { n } = await params;
   return pageMeta({
     title: `Products For You – Best Deals Online – Page ${n}`,
-    description: `Browse page ${n} of handpicked bestsellers at ${SITE.name}: fashion, home decor, lights and gadgets with up to 80% off, free delivery and Cash on Delivery.`,
+    description: `Browse page ${n} of premium dry fruits at ${SITE.name}: almonds, cashews, pistachios, dates, anjeer, makhana and gift boxes, with free delivery and Cash on Delivery.`,
     path: `/page/${n}/`,
   });
 }

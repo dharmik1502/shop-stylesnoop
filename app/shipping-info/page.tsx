@@ -5,7 +5,7 @@ import { SITE } from "../lib/site";
 
 export const metadata: Metadata = pageMeta({
   title: "Shipping Info – Free Delivery Across India in 3–4 Days",
-  description: "Free shipping on every StyleSnoop order. Same-day dispatch, delivery across India in 3–4 days, Cash on Delivery and SMS/email tracking.",
+  description: "Free shipping on every NuttyNest order. Same-day dispatch, delivery across India in 3–4 days, Cash on Delivery and SMS/email tracking.",
   path: "/shipping-info/",
   keywords: ["free shipping India", "free delivery", "shipping policy", "delivery time India", "same day dispatch"],
 });

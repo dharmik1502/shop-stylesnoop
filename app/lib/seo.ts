@@ -34,7 +34,7 @@ type PageMetaInput = {
 /** Title, description, keywords, canonical URL, Open Graph and Twitter card for one page. */
 export function pageMeta({ title, description, path, keywords, images, type = "website", noindex }: PageMetaInput): Metadata {
   const url = absUrl(path);
-  const ogImages = (images?.length ? images : ["/images/categories/c01.webp"]).map((src) => ({ url: src, alt: title }));
+  const ogImages = (images?.length ? images : ["/images/categories/nuts.webp"]).map((src) => ({ url: src, alt: title }));
   return {
     title,
     description,
@@ -48,26 +48,26 @@ export function pageMeta({ title, description, path, keywords, images, type = "w
 
 /** Search terms per category, used for category pages and the products inside them. */
 export const CATEGORY_KEYWORDS: Record<string, string[]> = {
-  fashion: ["fashion online", "trendy fashion", "fashion accessories", "watches for men and women", "hair accessories", "latest fashion India"],
-  trending: ["trending products", "trending gadgets", "viral products", "new arrivals", "latest trends 2026", "home gadgets"],
-  "best-seller": ["best seller products", "top rated products", "most popular products", "customer favourites", "best selling items online"],
-  "special-collection": ["special collection", "home decor items", "outdoor lights", "wall lights", "decorative lights", "premium home decor"],
-  "hot-deals": ["hot deals", "deals of the day", "today's offers", "up to 80% off", "clearance sale", "lowest price online"],
+  nuts: ["nuts online", "almonds", "cashew nuts", "pistachios", "walnuts", "healthy nuts India"],
+  "dried-fruits": ["dried fruits online", "anjeer", "dried apricots", "prunes", "dried cranberries", "dry fruits for health"],
+  "dates-raisins": ["dates online", "medjool dates", "kishmish", "black raisins", "golden raisins", "seedless raisins"],
+  "seeds-makhana": ["makhana online", "fox nuts", "chia seeds", "pumpkin seeds", "healthy seeds", "roasted makhana"],
+  "gift-boxes": ["dry fruit gift box", "diwali gift hamper", "corporate gifting dry fruits", "mixed dry fruits", "festive gift pack"],
 };
 
 /** Plain-language summary of a category for its meta description. */
 export const CATEGORY_BLURB: Record<string, string> = {
-  fashion: "trendy fashion, watches and accessories",
-  trending: "trending gadgets, viral home products and new arrivals",
-  "best-seller": "top rated best sellers loved by thousands of customers",
-  "special-collection": "home decor, outdoor and wall lights and premium picks",
-  "hot-deals": "today's hottest deals with up to 80% off",
+  nuts: "premium almonds, cashews, pistachios, walnuts and exotic nuts",
+  "dried-fruits": "anjeer, apricots, prunes, cranberries and other dried fruits",
+  "dates-raisins": "Medjool dates, golden kishmish and black raisins",
+  "seeds-makhana": "makhana, chia seeds, pumpkin seeds and healthy snacking seeds",
+  "gift-boxes": "dry fruit gift boxes, festive hampers and value combos",
 };
 
 /** Keywords for a product: its name, the feature phrases in its title, and buying-intent terms. */
 export function productKeywords(p: Product): string[] {
   const [head, ...rest] = p.title.split(/\s[–|-]\s/).map((s) => s.trim());
-  // "Green Sunray Dial, Sapphire Crystal, 316L Steel" -> separate feature phrases.
+  // "Jumbo Size, Raw & Unsalted, 500 g" -> separate feature phrases.
   const features = rest
     .flatMap((s) => s.split(/,|&|\bfor\b|\bwith\b/i))
     .map((s) => s.replace(/[()]/g, "").trim().toLowerCase())
@@ -196,7 +196,7 @@ export function categoryMeta(slug: string, name: string, count: number, image: s
   const paged = page > 1 ? ` – Page ${page}` : "";
   return pageMeta({
     title: `${label} – Buy ${label} Products Online at Best Price${paged}`,
-    description: `Shop ${count}+ ${blurb} at StyleSnoop. Up to 80% off, free delivery across India, Cash on Delivery and 7-day easy returns.`,
+    description: `Shop ${count}+ ${blurb} at NuttyNest. Freshly packed, free delivery across India and Cash on Delivery.`,
     path: page > 1 ? `/category/${slug}/page/${page}/` : `/category/${slug}/`,
     keywords: mergeKeywords([label, `${label} online`, `buy ${label.toLowerCase()} online`, `${label.toLowerCase()} India`], CATEGORY_KEYWORDS[slug]),
     images: [image],

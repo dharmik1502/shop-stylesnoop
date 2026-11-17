@@ -19,27 +19,27 @@ export function homePageCount() {
 
 function Hero({ spotlight }: { spotlight?: Product }) {
   const promos = [
-    { slug: "hot-deals", eyebrow: "Limited time", title: "Hot Deals", text: "Up to 80% off", tone: "from-[#fff1e6] to-[#ffe0cc]" },
-    { slug: "best-seller", eyebrow: "Customer favourites", title: "Best Sellers", text: "Top rated picks", tone: "from-[#eef4ff] to-[#dde8ff]" },
+    { slug: "gift-boxes", eyebrow: "Festive gifting", title: "Gift Boxes", text: "Hampers & combos", tone: "from-[#fff1e6] to-[#ffe0cc]" },
+    { slug: "dates-raisins", eyebrow: "Naturally sweet", title: "Dates & Raisins", text: "Medjool, kishmish & more", tone: "from-[#f3f7e9] to-[#e3eccd]" },
   ];
   return (
     <section className="mt-5 grid gap-4 lg:grid-cols-[2fr_1fr]">
-      <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-plum via-[#5a1650] to-brand text-white">
+      <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-plum via-[#6b3a14] to-brand text-white">
         <div className="pointer-events-none absolute -top-24 -right-16 h-72 w-72 rounded-full bg-white/10 blur-2xl" />
-        <div className="pointer-events-none absolute -bottom-28 left-1/3 h-72 w-72 rounded-full bg-[#ff6fb6]/20 blur-3xl" />
+        <div className="pointer-events-none absolute -bottom-28 left-1/3 h-72 w-72 rounded-full bg-[#f2b45a]/25 blur-3xl" />
         <div className="relative grid items-center gap-4 p-6 sm:grid-cols-[1.2fr_1fr] sm:p-10">
           <div>
             <span className="inline-flex items-center gap-1.5 rounded-full bg-white/15 px-3 py-1 text-[11.5px] font-semibold tracking-wide uppercase">
-              <IconBolt className="h-3.5 w-3.5 text-[#ffd36b]" /> New arrivals every week
+              <IconBolt className="h-3.5 w-3.5 text-[#ffd36b]" /> Fresh stock every week
             </span>
             <h1 className="mt-4 text-[28px] leading-[1.1] font-bold tracking-tight sm:text-[40px]">{SITE.tagline}</h1>
             <p className="mt-3 max-w-md text-[14px] leading-relaxed text-white/80 sm:text-[15px]">{SITE.welcome}</p>
             <div className="mt-6 flex flex-wrap gap-3">
               <Link
-                href="/category/hot-deals/"
+                href="/category/nuts/"
                 className="inline-flex h-11 items-center rounded-lg bg-white px-5 text-[14px] font-semibold text-plum shadow-lg transition hover:bg-brand-light"
               >
-                Shop Hot Deals
+                Shop Nuts
               </Link>
               <Link
                 href="/category/"
@@ -98,7 +98,7 @@ function Hero({ spotlight }: { spotlight?: Product }) {
 
 function Perks() {
   return (
-    <section className="mt-5 grid grid-cols-2 gap-3 rounded-2xl border border-line bg-white p-4 lg:grid-cols-4 lg:divide-x lg:divide-line lg:p-5">
+    <section className="mt-5 grid grid-cols-2 gap-3 rounded-2xl border border-line bg-white p-4 lg:divide-x lg:divide-line lg:p-5">
       {PERKS.map(({ Icon, title, text }) => (
         <div key={title} className="flex items-center gap-3 lg:justify-center lg:px-4">
           <Icon className="h-7 w-7 shrink-0 text-brand" />
@@ -134,15 +134,15 @@ export default function HomeView({ page }: { page: number }) {
               <CategoryRow />
             </section>
 
-            <section className="mt-10 rounded-2xl bg-gradient-to-r from-[#fff4f9] to-[#fdf1ff] p-4 sm:p-6">
+            <section className="mt-10 rounded-2xl bg-gradient-to-r from-[#fff8ef] to-[#fdf3e3] p-4 sm:p-6">
               <SectionHeader
                 title={
                   <span className="inline-flex items-center gap-2">
                     <IconBolt className="h-5 w-5 text-sale" /> Deals of the Day
                   </span>
                 }
-                subtitle="Biggest discounts on our most loved products"
-                href="/category/hot-deals/"
+                subtitle="Best savings on our most loved dry fruits"
+                href="/category/gift-boxes/"
               />
               <div className="scroll-x -mx-4 flex gap-3 overflow-x-auto px-4 pb-1 sm:-mx-6 sm:gap-4 sm:px-6">
                 {deals.map((p) => (
@@ -157,7 +157,7 @@ export default function HomeView({ page }: { page: number }) {
 
         <section className={page === 1 ? "mt-10" : "mt-6"}>
           {page === 1 ? (
-            <SectionHeader title="Products For You" subtitle="Handpicked bestsellers across every category" />
+            <SectionHeader title="Products For You" subtitle="Handpicked favourites from every category" />
           ) : (
             <SectionHeader as="h1" title="Products For You" subtitle={`Page ${page} of ${total}`} />
           )}

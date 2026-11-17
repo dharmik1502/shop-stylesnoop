@@ -5,7 +5,7 @@ import { SITE } from "../lib/site";
 
 export const metadata: Metadata = pageMeta({
   title: "Terms and Conditions",
-  description: "Terms and conditions for using the StyleSnoop website and placing orders.",
+  description: "Terms and conditions for using the NuttyNest website and placing orders.",
   path: "/terms-and-conditions/",
   keywords: ["terms and conditions", "terms of use"],
 });

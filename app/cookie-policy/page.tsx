@@ -5,7 +5,7 @@ import { SITE } from "../lib/site";
 
 export const metadata: Metadata = pageMeta({
   title: "Cookie Policy",
-  description: "How StyleSnoop uses cookies and similar technologies on its website.",
+  description: "How NuttyNest uses cookies and similar technologies on its website.",
   path: "/cookie-policy/",
   keywords: ["cookie policy"],
 });

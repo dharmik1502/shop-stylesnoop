@@ -5,31 +5,11 @@ export type Category = {
 };
 
 export const CATEGORIES: Category[] = [
-  {
-    "slug": "fashion",
-    "name": "Fashion",
-    "image": "/images/categories/c01.webp"
-  },
-  {
-    "slug": "trending",
-    "name": "Trending",
-    "image": "/images/categories/c02.webp"
-  },
-  {
-    "slug": "best-seller",
-    "name": "BestSeller",
-    "image": "/images/categories/c03.webp"
-  },
-  {
-    "slug": "special-collection",
-    "name": "Special Collection",
-    "image": "/images/categories/c04.webp"
-  },
-  {
-    "slug": "hot-deals",
-    "name": "HOT DEALS",
-    "image": "/images/categories/c05.webp"
-  }
+  { slug: "nuts", name: "Nuts", image: "/images/categories/nuts.webp" },
+  { slug: "dried-fruits", name: "Dried Fruits", image: "/images/categories/dried-fruits.webp" },
+  { slug: "dates-raisins", name: "Dates & Raisins", image: "/images/categories/dates-raisins.webp" },
+  { slug: "seeds-makhana", name: "Seeds & Makhana", image: "/images/categories/seeds-makhana.webp" },
+  { slug: "gift-boxes", name: "Gift Boxes & Combos", image: "/images/categories/gift-boxes.webp" },
 ];
 
 export const PAGE_SIZE = 6;
