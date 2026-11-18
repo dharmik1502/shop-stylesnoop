@@ -24,7 +24,6 @@ const SIDEBAR = [
       { href: "/contact/", label: "Contact Us" },
       { href: "/faqs/", label: "FAQs" },
       { href: "/shipping-info/", label: "Shipping Info" },
-      { href: "/refund-returns/", label: "Returns & Refunds" },
     ],
   },
   {

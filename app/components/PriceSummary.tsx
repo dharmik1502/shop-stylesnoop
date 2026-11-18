@@ -42,7 +42,7 @@ export default function PriceSummary({ lines, children }: { lines: Line[]; child
         {children}
       </div>
       <p className="flex items-center gap-2 border-t border-line px-5 py-3 text-[12px] text-muted">
-        <IconShield className="h-4 w-4 shrink-0" /> Safe and secure shopping. Easy returns. Pay by UPI or cash on delivery.
+        <IconShield className="h-4 w-4 shrink-0" /> Safe and secure shopping. Pay by UPI or cash on delivery.
       </p>
     </div>
   );

@@ -83,7 +83,7 @@ export function productKeywords(p: Product): string[] {
 
 /** Product description trimmed for a meta description (~155 chars). */
 export function productDescription(p: Product) {
-  const lead = `Buy ${p.title.split(/\s[–|-]\s/)[0]} online at ₹${p.price}. Free delivery, Cash on Delivery & easy returns. `;
+  const lead = `Buy ${p.title.split(/\s[–|-]\s/)[0]} online at ₹${p.price}. Free delivery & Cash on Delivery. `;
   const body = p.description[0] ?? "";
   const text = lead + body;
   return text.length > 158 ? `${text.slice(0, 155).replace(/\s+\S*$/, "")}…` : text;
@@ -161,13 +161,6 @@ export function productLd(p: Product, categoryName?: string) {
           handlingTime: { "@type": "QuantitativeValue", minValue: 0, maxValue: 1, unitCode: "DAY" },
           transitTime: { "@type": "QuantitativeValue", minValue: 3, maxValue: 4, unitCode: "DAY" },
         },
-      },
-      hasMerchantReturnPolicy: {
-        "@type": "MerchantReturnPolicy",
-        applicableCountry: "IN",
-        returnPolicyCategory: "https://schema.org/MerchantReturnFiniteReturnWindow",
-        merchantReturnDays: 7,
-        returnMethod: "https://schema.org/ReturnByMail",
       },
     },
   };

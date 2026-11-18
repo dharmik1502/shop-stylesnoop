@@ -72,12 +72,6 @@ export const IconCash = ({ className = "h-6 w-6" }: P) => (
   </svg>
 );
 
-export const IconReturn = ({ className = "h-6 w-6" }: P) => (
-  <svg {...base} className={className}>
-    <path d="M9 14L4 9l5-5" />
-    <path d="M4 9h10.5a5.5 5.5 0 010 11H11" />
-  </svg>
-);
 
 export const IconShield = ({ className = "h-6 w-6" }: P) => (
   <svg {...base} className={className}>

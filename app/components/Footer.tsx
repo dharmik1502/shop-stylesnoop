@@ -19,7 +19,6 @@ const COLUMNS = [
       { href: "/contact/", label: "Contact Us" },
       { href: "/faqs/", label: "FAQs" },
       { href: "/shipping-info/", label: "Shipping Info" },
-      { href: "/refund-returns/", label: "Returns & Refunds" },
       { href: "/cart/", label: "My Cart" },
     ],
   },

@@ -103,4 +103,58 @@ img, video, canvas, picture {
 details > summary { list-style: none; }
 details > summary::-webkit-details-marker { display: none; }
 
+/* Festive (Diwali) banner animations */
+@keyframes diya-flicker {
+    0%, 100% { transform: scale(1, 1) rotate(-1deg); opacity: 1; }
+    25% { transform: scale(0.94, 1.06) rotate(1.5deg); opacity: 0.92; }
+    50% { transform: scale(1.04, 0.95) rotate(-2deg); opacity: 1; }
+    75% { transform: scale(0.97, 1.04) rotate(1deg); opacity: 0.95; }
+}
+@keyframes glow-pulse {
+    0%, 100% { opacity: 0.75; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.12); }
+}
+@keyframes lantern-sway {
+    0%, 100% { transform: rotate(-4deg); }
+    50% { transform: rotate(4deg); }
+}
+@keyframes bulb-twinkle {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.35; }
+}
+@keyframes sparkle {
+    0%, 100% { opacity: 0; transform: scale(0.3) rotate(0deg); }
+    50% { opacity: 1; transform: scale(1) rotate(45deg); }
+}
+@keyframes slow-spin {
+    to { transform: rotate(360deg); }
+}
+@keyframes float-y {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+@keyframes shine {
+    from { background-position: 200% center; }
+    to { background-position: -200% center; }
+}
+.diya-flame { transform-box: fill-box; transform-origin: 50% 100%; animation: diya-flicker 1.6s ease-in-out infinite; }
+.diya-glow { transform-box: fill-box; transform-origin: center; animation: glow-pulse 2.4s ease-in-out infinite; }
+.lantern-sway { transform-origin: 50% 0; animation: lantern-sway 4.5s ease-in-out infinite; }
+.bulb-twinkle { animation: bulb-twinkle 1.8s ease-in-out infinite; }
+.sparkle { animation: sparkle 2.8s ease-in-out infinite; }
+.slow-spin { animation: slow-spin 80s linear infinite; }
+.float-y { animation: float-y 5s ease-in-out infinite; }
+.gold-text {
+    background: linear-gradient(100deg, #f6d27a 0%, #fff4c9 25%, #e9a93b 50%, #fff4c9 75%, #f6d27a 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: shine 6s linear infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+    .diya-flame, .diya-glow, .lantern-sway, .bulb-twinkle, .sparkle, .slow-spin, .float-y, .gold-text { animation: none; }
+    .sparkle { opacity: 0.8; }
+}
+
 /* End of globals */

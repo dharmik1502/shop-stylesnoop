@@ -5,7 +5,7 @@ import { SITE } from "../lib/site";
 
 export const metadata: Metadata = pageMeta({
   title: "Contact Us – Customer Support & Order Help",
-  description: "Contact NuttyNest customer support by email for order help, tracking, returns and product questions. We reply within 24–48 hours.",
+  description: "Contact NuttyNest customer support by email for order help, tracking and product questions. We reply within 24–48 hours.",
   path: "/contact/",
   keywords: ["NuttyNest contact", "customer support", "order help", "customer care email", "track my order"],
 });

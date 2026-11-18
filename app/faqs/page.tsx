@@ -6,10 +6,10 @@ import StaticPage from "../components/StaticPage";
 import { SITE } from "../lib/site";
 
 export const metadata: Metadata = pageMeta({
-  title: "FAQs – Delivery, Cash on Delivery, Returns & Tracking",
-  description: "Answers to common questions about NuttyNest dry fruits: freshness, storage, shelf life, delivery time, Cash on Delivery, returns and order tracking.",
+  title: "FAQs – Delivery, Cash on Delivery & Tracking",
+  description: "Answers to common questions about NuttyNest dry fruits: freshness, storage, shelf life, delivery time, Cash on Delivery and order tracking.",
   path: "/faqs/",
-  keywords: ["NuttyNest FAQ", "delivery time", "cash on delivery", "return policy", "order tracking", "cancel order", "how to store dry fruits", "dry fruits shelf life"],
+  keywords: ["NuttyNest FAQ", "delivery time", "cash on delivery", "order tracking", "how to store dry fruits", "dry fruits shelf life"],
 });
 
 const GROUPS: { title: string; items: [string, string][] }[] = [
@@ -20,14 +20,6 @@ const GROUPS: { title: string; items: [string, string][] }[] = [
       ["Serviceable Pincode for Delivery?", "We ship products across India."],
       ["Available Payment Method?", "Cash on Delivery only."],
       ["Order Tracking Option?", "After dispatch, you can track the shipment on the courier’s website using tracking details sent via SMS or email."],
-    ],
-  },
-  {
-    title: "Returns & Cancellations",
-    items: [
-      ["Return-Refund Option?", "Available with a simple request via email."],
-      ["Period For Return Request?", "Within 7 days after receiving the order."],
-      ["Order Cancellation Option?", "Available with a simple request via email, before dispatch."],
     ],
   },
   {
@@ -46,7 +38,7 @@ const GROUPS: { title: string; items: [string, string][] }[] = [
 
 export default function FaqsPage() {
   return (
-    <StaticPage title="Frequently Asked Questions" meta="Quick answers about orders, delivery, returns, freshness and storage.">
+    <StaticPage title="Frequently Asked Questions" meta="Quick answers about orders, delivery, freshness and storage.">
       <JsonLd data={faqLd(GROUPS.flatMap((g) => g.items))} />
       {GROUPS.map((g) => (
         <section key={g.title} className="mb-8">

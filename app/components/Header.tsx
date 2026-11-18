@@ -36,7 +36,6 @@ function SearchForm({ id }: { id: string }) {
 const INFO_LINKS = [
   { href: "/faqs/", label: "FAQs" },
   { href: "/shipping-info/", label: "Shipping Info" },
-  { href: "/refund-returns/", label: "Returns & Refunds" },
   { href: "/about/", label: "About Us" },
   { href: "/contact/", label: "Contact Us" },
 ];
@@ -73,9 +72,6 @@ export default function Header() {
           <div className="hidden items-center gap-5 text-white/80 sm:flex">
             <Link href="/shipping-info/" className="hover:text-white">
               Track Order
-            </Link>
-            <Link href="/refund-returns/" className="hover:text-white">
-              7-Day Easy Returns
             </Link>
             <Link href="/contact/" className="hover:text-white">
               Help Center

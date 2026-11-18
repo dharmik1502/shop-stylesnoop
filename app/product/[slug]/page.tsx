@@ -5,7 +5,7 @@ import Breadcrumbs from "../../components/Breadcrumbs";
 import BuyButtons from "../../components/BuyButtons";
 import { categoryLabel } from "../../components/CategoryRow";
 import DeliveryCheck from "../../components/DeliveryCheck";
-import { IconCash, IconReturn, IconShield, IconStar, IconTag, IconTruck } from "../../components/Icons";
+import { IconCash, IconShield, IconStar, IconTag, IconTruck } from "../../components/Icons";
 import ProductCard, { RatingBadge } from "../../components/ProductCard";
 import ProductDescription from "../../components/ProductDescription";
 import ProductGallery from "../../components/ProductGallery";
@@ -63,7 +63,6 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
     product.freeDelivery && { title: "Free Delivery", text: "No shipping charges on this item, anywhere in India." },
     { title: "Cash on Delivery", text: "Pay in cash when your order arrives at your doorstep." },
     { title: "Special Price", text: `${off}% off MRP, already applied to the price shown.` },
-    { title: "Easy Returns", text: "Request a return within 7 days of delivery by email." },
   ].filter(Boolean) as { title: string; text: string }[];
 
   return (
@@ -143,7 +142,6 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
               {[
                 { Icon: IconTruck, label: "Free Delivery" },
                 { Icon: IconCash, label: "Cash on Delivery" },
-                { Icon: IconReturn, label: "7-Day Returns" },
                 { Icon: IconShield, label: "Secure Shopping" },
               ].map(({ Icon, label }) => (
                 <div key={label} className="flex flex-col items-center gap-1.5 rounded-xl bg-surface px-2 py-3 text-center">

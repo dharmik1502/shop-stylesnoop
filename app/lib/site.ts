@@ -76,3 +76,9 @@ export function upiAppLink(app: (typeof UPI_APPS)[number], platform: "android" |
   if (platform === "ios") return `${app.ios}?${q}`;
   return `intent://pay?${q}#Intent;scheme=upi;package=${app.android};end`;
 }
+
+/** Festive sale shown in the homepage hero and banner. Set `endsAt` in IST; the countdown hides itself after it. */
+export const FESTIVE_SALE = {
+  name: "Diwali Dhamaka Sale",
+  endsAt: "2026-11-30T23:59:59+05:30",
+};

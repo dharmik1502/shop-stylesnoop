@@ -15,7 +15,7 @@ Next 16 needs Node 20.9 or newer.
 
 ## Routes
 
-`/` home · `/page/{n}/` · `/category/` · `/category/{slug}/` · `/category/{slug}/page/{n}/` · `/product/{slug}/` · `/search/?q=` · `/cart/` · `/checkout/` · `/contact/` · `/about/` · `/faqs/` · `/terms-and-conditions/` · `/privacy-policy/` · `/cookie-policy/` · `/refund-returns/` · `/disclosure-policy/` · `/disclaimer/` · `/shipping-info/` · `/sitemap.xml` · `/robots.txt`
+`/` home · `/page/{n}/` · `/category/` · `/category/{slug}/` · `/category/{slug}/page/{n}/` · `/product/{slug}/` · `/search/?q=` · `/cart/` · `/checkout/` · `/contact/` · `/about/` · `/faqs/` · `/terms-and-conditions/` · `/privacy-policy/` · `/cookie-policy/` · `/disclosure-policy/` · `/disclaimer/` · `/shipping-info/` · `/sitemap.xml` · `/robots.txt`
 
 Every route is prerendered at build time (`output: "export"`, `trailingSlash: true` in `next.config.ts`). Home, category and product pages come from `generateStaticParams`, so a new product or category gets its page and its pagination without any routing changes. Search runs in the browser over the bundled product list. Unknown URLs show `app/not-found.tsx`.
 
